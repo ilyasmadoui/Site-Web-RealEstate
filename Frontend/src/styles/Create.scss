@@ -1,0 +1,273 @@
+.create-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .btns-container{
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 10px;
+    }
+    h1 {
+        text-align: center;
+        color: #2264A7;
+        border-bottom: 1px solid #2264A7;
+    }
+
+    .progress-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .progress-line {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: #ccc;
+        z-index: -1;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .progress-line .filled {
+        height: 100%;
+        background: blue;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .step-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: darkorchid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .step-circle.active {
+        background-color: blue;
+    }
+
+    .step-circle {
+        position: relative;
+      }
+      
+      .tooltip {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: black;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+    .step-circle:hover .tooltip {
+        display: block;
+    }
+
+    .step-info {
+        font-size: 1.5rem;
+        color: #2264A7;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .form-sections {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 10px;
+        border: 1px solid darkorchid;
+        padding: 5px;
+        background-color: #fff;
+        width: 60%;
+    }
+
+    .owner-input, .propertie-input, .image-upload {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 0px;
+        background: #fff;
+        flex: 1;
+
+        h1 {
+            color: #2264A7;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: aliceblue;
+            width: 90%;
+        }
+    }
+
+    .image-upload {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px dashed #4CAF50; /* Bordure en pointillés verte */
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        max-width: 450px; /* Ajuste la largeur maximale */
+        text-align: center;
+      }
+      
+      .image-upload:hover {
+        background-color: #e8f5e9; /* Légère teinte verte au survol */
+      }
+      
+      .image-upload input {
+        display: none; /* Cache l'input natif */
+      }
+      
+      .image-upload label {
+        font-size: 16px;
+        color: #4CAF50;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      
+
+    .measure-container {
+        display: flex;
+        gap: 10px; 
+        align-items: center;
+      }
+      
+      .measure-container select {
+        width: 130px; 
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      .measure-container select:required {
+        border-color: rgb(179, 176, 176); 
+        color:rgb(179, 176, 176) ;
+        background-color: aliceblue;
+      }
+
+      .measure-container input{
+        width: 80px; 
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      .measure-container input:required {
+        border-color: rgb(179, 176, 176); 
+      }
+
+
+    .image-preview {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    }
+
+    .submit-btn {
+        align-self: center;
+        padding: 10px 20px;
+        background-color: darkorchid;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        cursor: pointer;
+        font-size: 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: white;
+            color: darkorchid;
+            border: 1px solid darkorchid;
+        }
+    }
+    
+    .back-button {
+      border: transparent;
+      border-radius: 7px;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #2264A7;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+  }
+  
+  .back-button:hover {
+      background-color: #2264A7;
+      color: #fff;
+  }
+  
+  .back-button:disabled {
+      background-color: transparent !important;
+      color: black !important;
+      border: none;
+      opacity: 0.6; 
+      cursor: not-allowed; 
+  }
+  
+          
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .back-button {
+          left: 8%;
+          font-size: 22px;
+          padding: 4px 8px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .back-button {
+          left: 5%;
+          font-size: 20px;
+          padding: 5px 8px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .back-button {
+          left: 3%;
+          font-size: 18px;
+          padding: 4px 6px;
+        }
+      }
+      
+      
+}

@@ -1,0 +1,162 @@
+// Styles la page login
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(235, 245, 255, 0.7);
+    backdrop-filter: blur(10px);
+  }
+  
+  // div login
+  .login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 380px;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: fadeInZoom 0.8s ease-out forwards;
+  
+    @keyframes fadeInZoom {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+  
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #2264A7;
+      margin-bottom: 20px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    .input-group {
+      text-align: left;
+      margin-bottom: 15px;
+  
+      label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 5px;
+      }
+  
+      input {
+        width: 93%;
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out, transform 0.2s ease-in-out;
+  
+        &:focus {
+          outline: none;
+          border-color: #2264A7;
+          box-shadow: 0 0 8px rgba(34, 100, 167, 0.4);
+          transform: scale(1.03);
+        }
+      }
+    }
+  
+    // Mot de passe
+    .password-group {
+      position: relative;
+  
+      input {
+        width: 86%;
+        padding: 10px 40px 10px 10px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+  
+        &:focus {
+          outline: none;
+          border-color: #2264A7;
+          box-shadow: 0 0 8px rgba(34, 100, 167, 0.4);
+          transform: scale(1.03);
+        }
+      }
+  
+      .toggle-password {
+        position: absolute;
+        right: 10px;
+        top: 68%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #777;
+        font-size: 18px;
+        padding: 5px;
+        transition: color 0.3s ease-in-out;
+  
+        &:hover {
+          color: #2264A7;
+        }
+      }
+    }
+  
+    // Lien d'inscription
+    .register-link {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #444;
+  
+      a {
+        color: #2264A7;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  
+        &:hover {
+          color: #1C4C81;
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    // Bouton login
+    .login-btn {
+      width: 100%;
+      background: #2264A7;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  
+      &:hover {
+        background: #1C4C81;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(28, 76, 129, 0.3);
+      }
+  
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+  
+  // Responsive
+  @media (max-width: 768px) {
+    .login-box {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+  
