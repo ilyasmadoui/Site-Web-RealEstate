@@ -1,0 +1,49 @@
+:root {
+  --primary-color: #6C63FF; /* Bleu violet moderne */
+  --secondary-color: #FF6B6B; /* Rouge doux */
+  --background-color: #F8F9FA; /* Gris clair */
+  --card-bg: #ffffff; /* Blanc pur */
+  --text-color: #333;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-color: #e0e0e0;
+}
+
+.card {
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 2px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bordure latérale colorée */
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+.card-content {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+}
